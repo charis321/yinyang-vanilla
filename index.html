@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="image/yi_yang.ico" type="image/icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <title>周易</title>
+    <script src="https://kit.fontawesome.com/6aefada379.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="gua-dict-btn" onclick="toggleGuaDict()"></div>
+    <div class="gua-dict-block">
+      <div class="gua-dict">
+        <div class="gua-gallery"></div>
+        <div class="gua-gallery-show" hidden>
+          
+        </div>
+      </div>
+    </div>
+    <div class="game-broadcast">
+      <h1>請按"開始"</h1>
+    </div>
+    <div class="container"></div>
+    <div class="zone" id="main-zone"></div>
+    <div class="zone" id="hand-zone">
+      <div class="zone " id="left-hand"></div>
+      <div class="zone " id="right-hand"></div>
+    </div>
+    
+    <div class="zone" id="tian-zone"></div>
+    <div class="zone" id="remove-zone"></div>
+    
+    <div class="split-pick-btn" hidden>
+      <button id="left-pick" onmousedown='leftPick()' type="button" ><i class="fa-solid fa-caret-left"></i></button>
+      <button id="right-pick" onmousedown='rightPick()' type="button" ><i class="fa-solid fa-caret-right"></i></button>
+    </div>
+    <div class="result-show" hidden></div>
+    <div class="process-controller">
+      <!-- <button id="start-btn" class="controller-btn" onclick="nextStage()">開始</button> -->
+      <button id="next-stage-btn" class="controller-btn" onclick="nextStage(true)" >開始</button>
+      
+    </div>
+    <div class="game-controller">
+      <button id="reset-btn" class="controller-btn" onclick='resetSigns()' type="button" >重新開始</button>
+      <button id="clear-all-btn" class="controller-btn" onclick='clearGuas()' type="button" >清除全部</button>
+    </div>
+    <!-- <ol>
+        <li>Create 50 signs</li>
+        <li>send 1 sign</li>
+        <li>Split all signs to half  </li>
+        <li>Send all to left and right    </li>
+        <li>pick/send  1 sign</li>
+        <li>Divided by 4 </li>
+        <li>Remove</li>
+        <li>Send left/right </li>
+        <li>Count all</li>
+      </ol> -->
+    <div class="record-table" draggable="true"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    
+  </body>
+</html>
